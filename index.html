@@ -1,29 +1,169 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>AI Chat</title>
+  <title>Hiruy Recipe AI</title>
 
-        <link rel="stylesheet" href="style.css" />
-    </head>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <div class="container">
-            <h1>AI Chat</h1>
+<body>
 
-            <div id="chat">
-                <!-- Messages will appear here -->
-            </div>
+  <div class="app">
 
-            <div class="input-area">
-                <input type="text" id="prompt" placeholder="Ask something..." />
+    <aside class="sidebar">
 
-                <button id="sendBtn">Send</button>
-            </div>
+      <div class="brand">
+        <div class="brand-icon">🍳</div>
+
+        <div>
+          <h2>Hiruy Recipe</h2>
+          <span>AI Assistant</span>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+      </div>
+
+      <button id="newChatBtn" class="new-chat">
+        ＋ New Chat
+      </button>
+
+      <nav class="sidebar-nav">
+
+        <button class="nav-item active">
+          💬 Chat
+        </button>
+
+        <button class="nav-item">
+          🖼️ Images
+        </button>
+
+        <button class="nav-item">
+          ⭐ Hiruy Special
+        </button>
+
+        <button class="nav-item">
+          🛎️ Services
+        </button>
+
+      </nav>
+
+      <div class="sidebar-section">
+
+        <p class="section-title">LANGUAGE</p>
+
+        <button id="languageBtn" class="nav-item" type="button">
+          🌐 Language
+          <span class="arrow">›</span>
+        </button>
+
+        <div id="languageOptions" class="language-options">
+
+          <button type="button" data-language="English">
+            🇬🇧 English
+          </button>
+
+          <button type="button" data-language="Amharic">
+            🇪🇹 አማርኛ
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar-bottom">
+
+        <button class="nav-item" type="button">
+          ⚙️ Settings
+        </button>
+
+        <div class="sidebar-footer">
+          © 2026 Hiruy Recipe
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+      <header class="chat-header">
+
+        <div class="mobile-menu">☰</div>
+
+        <div>
+          <h1>Hiruy Recipe chatbot</h1>
+          <p>Your Ethiopian Cooking Assistant</p>
+        </div>
+
+        <button id="topLanguageBtn" class="language-badge">
+          🇬🇧 English
+        </button>
+
+      </header>
+
+
+      <div id="chat">
+
+        <div class="message ai">
+
+          <strong>🤖 Hiruy AI</strong>
+
+          <p>
+            👋 Welcome to Hiruy chatbot!
+          </p>
+
+          <p>
+            Your cooking assistant for recipes, ingredients,
+            and step-by-step cooking help.
+          </p>
+
+          <p>
+            What would you like to cook today? 🍳
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="input-area">
+
+        <button id="attachBtn" type="button" title="Attach file">
+          📎
+        </button>
+
+        <input
+          type="file"
+          id="fileInput"
+          hidden
+          accept="image/*,.pdf,.txt"
+        >
+
+        <input
+          type="text"
+          id="prompt"
+          placeholder="Ask about a recipe... / ስለ ምግብ ይጠይቁ..."
+        >
+
+        <button id="voiceBtn" type="button" title="Voice input">
+          🎤
+        </button>
+
+        <button id="sendBtn" type="button">
+          Send
+        </button>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
 </html>
